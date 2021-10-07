@@ -1,0 +1,39 @@
+html{
+    background-color: darkslategray;
+}
+body{
+    margin: auto;
+    width: 400px;
+    align-self: center;
+    justify-self: center;
+}
+button{
+    width: 6vw;
+    height: 2.5rem;
+    text-align: center;
+    background-color: dimgray;
+    color: white;
+    flex: 0 1 auto;
+    font-weight: bold;
+}
+h1{
+    color: red;
+    text-align: center;
+}
+#div-buttons{
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    display: flex; 
+}
+#div-boxes{
+    background-color: pink;
+    margin: 0px;
+}
+#grid-container{
+    display: grid;
+    margin-top: 2rem;
+    background-color: whitesmoke;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows: repeat(16,1fr);
+}
