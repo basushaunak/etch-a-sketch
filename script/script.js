@@ -34,14 +34,16 @@ function mouseClick(event){
             if(event.target.innerText === "Start"){
                 event.target.innerText = "Stop" ;                          
             } else {
-                event.target.innerText = "Start";
+                event.target.innerText = "Start";            
+            }
+            if(backgroundColor === "whitesmoke"){
+                backgroundColor = "black";
             }
             paintStart = !(paintStart);
         } else if(event.target.id === "btn-clear"){         
-            backgroundColorRandom = false;
             resetImage();
         } else if(event.target.id === "btn-eraser"){     
-            backgroundColorRandom = false;       
+            backgroundColorRandom = false;
             backgroundColor = "whitesmoke";
         } else if(event.target.id === "btn-black"){  
             backgroundColor = "black";
@@ -65,4 +67,7 @@ function resetImage(){
     arrayBoxes.forEach(item =>{ 
         item.style.backgroundColor="whitesmoke";
     })
+    let obj = document.querySelector("#btn-start");
+    obj.innerText = "Start";
+    paintStart = false;
 }
